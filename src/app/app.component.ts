@@ -8,9 +8,5 @@ import { PaisService } from './pais/services/pais.service';
 })
 export class AppComponent {
   title = 'angular-paises';
-  constructor(private paisService: PaisService) {
-    this.paisService.buscarPaises().subscribe((data) => {
-      console.log(data);
-    });
-  }
+  constructor() {}
 }

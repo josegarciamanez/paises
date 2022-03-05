@@ -70,3 +70,22 @@
 .page-link:hover {
   color: #a519ad;
 }
+
+.bi:hover {
+  cursor: pointer;
+}
+
+ul.list-group:hover {
+  cursor: pointer;
+}
+
+.btn-purple {
+  background-color: #a519ad;
+  border-color: #a519ad;
+  color: white;
+}
+.btn-purple:hover {
+  background-color: white;
+  border-color: #a519ad;
+  color: #a519ad;
+}

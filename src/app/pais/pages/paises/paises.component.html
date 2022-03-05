@@ -1,7 +1,10 @@
 <h2>Todos los Paises</h2>
-<span>(Pinche en la bandera de cada uno de los paises para ver su escudo de armas)*</span>
+<span>(Click en la bandera del país para ver su escudo de armas)*</span>
 <hr />
-<ngb-pagination [collectionSize]="paises.length" [(page)]="page"></ngb-pagination>
+<ngb-pagination
+  [collectionSize]="paises.length"
+  [(page)]="page"
+></ngb-pagination>
 <table class="table table-hover table-striped">
   <thead>
     <tr>
@@ -14,7 +17,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let pais of paises | slice: (page-1) * pageSize : page * pageSize; let i = index">
+    <tr
+      *ngFor="let pais of paises | slice: (page-1) * pageSize : page * pageSize; let i = index"
+    >
       <td>
         <button type="button" class="btn-flag" (click)="mostrarModalInfo(pais)">
           <img class="small-flag" [src]="pais.flags.svg" />
@@ -23,9 +28,17 @@
       <td>{{ pais.name.common }}</td>
       <td>{{ pais.population | number }}</td>
       <td>{{ getLanguage(pais.languages)}}</td>
-      <td><a [href]="pais.maps.googleMaps" target="_blank"><i class="bi bi-geo-alt-fill m-1" style="color: purple;"></i></a></td>
       <td>
-        <a><i class="bi bi-eye-fill m-1" style="color: green;"></i></a>
+        <a [href]="pais.maps.googleMaps" target="_blank"
+          ><i class="bi bi-geo-alt-fill m-1" style="color: purple;"></i
+        ></a>
+      </td>
+      <td>
+        <a
+          [routerLink]="['/pais', pais.name.common]"
+          routerLinkActive="router-link-active"
+          ><i class="bi bi-eye-fill m-1" style="color: green;"></i
+        ></a>
         <a><i class="bi bi-pen-fill m-1"></i></a>
         <a><i class="bi bi-trash-fill m-1" style="color: red;"></i></a>
       </td>
@@ -50,4 +63,3 @@
     </tr>
   </tbody>
 </table>
-
