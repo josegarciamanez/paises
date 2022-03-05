@@ -1,5 +1,11 @@
 # AngularPaises
 
+- Instalar node_modules con:
+
+```code
+npm install
+```
+
 ## INFORMACIÓN:
 
 - Tiempo: 3 días.
