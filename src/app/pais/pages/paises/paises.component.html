@@ -1,0 +1,46 @@
+<h2>Paises</h2>
+<hr />
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Bandera</th>
+      <th>Nombre</th>
+      <th>Población</th>
+      <th>Idioma Oficial</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pais of paises; let i = index">
+      <td>
+        <button type="button" class="btn-flag" (click)="mostrarModalInfo(pais)">
+          <img class="small-flag" [src]="pais.flags.svg" />
+        </button>
+      </td>
+      <td>{{ pais.name.common }}</td>
+      <td>{{ pais.population | number }}</td>
+      <td>{{ getLanguage(pais.languages)}}</td>
+      <td>
+        <a>Editar</a>
+      </td>
+
+      <ng-template #myModalInfo let-modal>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Escudo de Armas</h5>
+            <button
+              type="button"
+              class="btn btn-close"
+              data-dismiss="modal"
+              aria-label="Close"
+              (click)="modal.close()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img class="big-flag" [src]="coatOfArms" />
+          </div>
+        </div>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>
