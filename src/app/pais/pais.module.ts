@@ -10,6 +10,8 @@ import { ModalFlagComponent } from './components/modal-flag/modal-flag.component
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { RouterModule } from '@angular/router';
+import { AgregarPaisComponent } from './pages/agregar-pais/agregar-pais.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { RouterModule } from '@angular/router';
     ModalFlagComponent,
     PaisInputComponent,
     PaisTablaComponent,
+    AgregarPaisComponent,
   ],
   exports: [
     PorPaisComponent,
@@ -29,6 +32,6 @@ import { RouterModule } from '@angular/router';
     PaisInputComponent,
     PaisTablaComponent,
   ],
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, NgbModule],
 })
 export class PaisModule {}

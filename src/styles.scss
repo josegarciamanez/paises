@@ -57,3 +57,16 @@
 .mt-6 {
   margin-top: 6.5rem !important;
 }
+
+.page-item.active .page-link {
+  background-color: #a519ad;
+  border-color: #a519ad;
+}
+
+.page-link {
+  color: #a519ad;
+}
+
+.page-link:hover {
+  color: #a519ad;
+}

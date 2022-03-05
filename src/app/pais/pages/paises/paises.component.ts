@@ -15,6 +15,8 @@ export class PaisesComponent implements OnInit {
 
   paises: Country[] = [];
   coatOfArms: string | undefined;
+  page: number = 1;
+  pageSize = 10;
 
   constructor(
     private paisService: PaisService,
