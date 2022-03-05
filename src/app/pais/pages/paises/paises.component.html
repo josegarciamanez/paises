@@ -40,7 +40,9 @@
           ><i class="bi bi-eye-fill m-1" style="color: green;"></i
         ></a>
         <a><i class="bi bi-pen-fill m-1"></i></a>
-        <a><i class="bi bi-trash-fill m-1" style="color: red;"></i></a>
+        <a (click)="delete(pais)"
+          ><i class="bi bi-trash-fill m-1" style="color: red;"></i
+        ></a>
       </td>
 
       <ng-template #myModalInfo let-modal>

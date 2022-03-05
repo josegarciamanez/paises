@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { Country } from '../../interfaces/pais.interface';
 import { PaisService } from '../../services/pais.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-paises',
@@ -39,5 +40,21 @@ export class PaisesComponent implements OnInit {
   mostrarModalInfo(pais: any) {
     this.modalService.open(this.myModalInfo);
     this.coatOfArms = pais.coatOfArms.svg;
+  }
+
+  delete(pais: Country) {
+    Swal.fire({
+      title: `¿Desea eliminar ${pais.name.common}?`,
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      denyButtonText: `No Eliminar`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(`${pais.name.common} eliminado!`, '', 'success');
+      } else if (result.isDenied) {
+        Swal.fire(`No se eliminó ${pais.name.common}`, '', 'info');
+      }
+    });
   }
 }
