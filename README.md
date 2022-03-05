@@ -25,10 +25,9 @@
 - La creación y actualización no tiene que ser funcional.
 - Documentación de la API pública: https://restcountries.com/#api-endpoints-v3-all
 
-TODO: - PANTALLA TODOS LOS PAISES SORT ??
 TODO: - PANTALLA AGREGAR NUEVO PAIS
 TODO: - PANTALLA VER PAÍS EDITAR
-TODO: - PANTALLA VER PAÍS ELIMINAR
+TODO: - PANTALLA TODOS LOS PAISES SORT ??
 TODO: - TEST UNITARIOS
 TODO: - REFACTOR
 TODO: - DOCUMENTACIÓN
