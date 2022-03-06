@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
@@ -9,7 +9,6 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-country-form',
   templateUrl: './country-form.component.html',
-  styleUrls: ['./country-form.component.scss'],
 })
 export class CountryFormComponent implements OnInit {
   pais: Country | undefined;
@@ -39,6 +38,10 @@ export class CountryFormComponent implements OnInit {
     }
   }
 
+  /**
+   * Set the values of the form
+   * @date 3/6/2022 - 7:45:05 PM
+   */
   setValues() {
     this.countryForm.controls['nombre'].setValue(this.pais!.name.common);
     this.countryForm.controls['capital'].setValue(this.pais!.capital);
@@ -48,14 +51,25 @@ export class CountryFormComponent implements OnInit {
     );
   }
 
-  campoEsValido(campo: string) {
+  /**
+   * Check if the field is valid
+   * @date 3/6/2022 - 7:48:00 PM
+   *
+   * @param {string} campo
+   * @returns {*}
+   */
+  fieldIsValid(campo: string) {
     return (
       this.countryForm.controls[campo].errors &&
       this.countryForm.controls[campo].touched
     );
   }
 
-  guardar() {
+  /**
+   * Save the country to the database
+   * @date 3/6/2022 - 7:49:40 PM
+   */
+  saveCountry() {
     if (this.countryForm.invalid) {
       this.countryForm.markAllAsTouched();
       return;
@@ -73,6 +87,13 @@ export class CountryFormComponent implements OnInit {
     }
   }
 
+  /**
+   * Recover the language from the Languages object
+   * @date 3/6/2022 - 7:50:32 PM
+   *
+   * @param {object} language
+   * @returns {*}
+   */
   getLanguage(language: object) {
     if (language) {
       return Object.values(language)[0];

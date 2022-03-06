@@ -1,13 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-flag',
   templateUrl: './modal-flag.component.html',
-  styleUrls: ['./modal-flag.component.scss'],
 })
-export class ModalFlagComponent implements OnInit {
+export class ModalFlagComponent {
   @Input() pais: any;
-  constructor() {}
-
-  ngOnInit(): void {}
 }

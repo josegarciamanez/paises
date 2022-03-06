@@ -5,7 +5,6 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-por-capital',
   templateUrl: './por-capital.component.html',
-  styles: [],
 })
 export class PorCapitalComponent {
   termino: string = '';
@@ -14,6 +13,12 @@ export class PorCapitalComponent {
 
   constructor(private paisService: PaisService) {}
 
+  /**
+   * Search for countries by capital
+   * @date 3/6/2022 - 8:19:50 PM
+   *
+   * @param {string} termino
+   */
   buscar(termino: string) {
     this.hayError = false;
     this.termino = termino;

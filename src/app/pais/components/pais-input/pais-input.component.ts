@@ -15,7 +15,7 @@ export class PaisInputComponent implements OnInit {
 
   debouncer: Subject<string> = new Subject();
 
-  termino: string = '';
+  term: string = '';
 
   ngOnInit() {
     this.debouncer.pipe(debounceTime(300)).subscribe((valor) => {
@@ -23,11 +23,19 @@ export class PaisInputComponent implements OnInit {
     });
   }
 
-  buscar() {
-    this.onEnter.emit(this.termino);
+  /**
+   * Search the selected term
+   * @date 3/6/2022 - 7:56:33 PM
+   */
+  search() {
+    this.onEnter.emit(this.term);
   }
 
-  teclaPresionada() {
-    this.debouncer.next(this.termino);
+  /**
+   * Call the Debounce event
+   * @date 3/6/2022 - 7:56:02 PM
+   */
+  pressedKey() {
+    this.debouncer.next(this.term);
   }
 }

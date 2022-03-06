@@ -1,12 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+$color-purple: #a519ad;
+$color-white: #ffffff;
 .small-flag {
   width: 50px;
 }
 
+/* flags */
 .big-flag {
   width: 465px;
 }
@@ -17,9 +18,10 @@
   margin: 0;
 }
 
+/* buttons */
 .btn-close {
   transition: all 0.6s ease;
-  color: white !important;
+  color: $color-white !important;
 }
 
 .btn-close:focus {
@@ -31,10 +33,12 @@
   transition: all 0.6s ease;
 }
 
+/* modal */
 .modal-content {
   border-radius: 1.3rem;
 }
 
+/* navbar styles */
 .logo-nav {
   width: 70px;
 }
@@ -54,25 +58,44 @@
   z-index: 999;
 }
 
+/* utils */
 .mt-6 {
   margin-top: 6.5rem !important;
 }
 
+/* links */
 .page-item.active .page-link {
-  background-color: #a519ad;
-  border-color: #a519ad;
+  background-color: $color-purple;
+  border-color: $color-purple;
 }
 
 .page-link {
-  color: #a519ad;
+  color: $color-purple;
 }
 
 .page-link:hover {
-  color: #a519ad;
+  color: $color-purple;
 }
 
+/* buttons*/
 .bi:hover {
   cursor: pointer;
+}
+
+.bi-eye-fill {
+  color: green;
+}
+
+.bi-pencil {
+  color: $color-purple;
+}
+
+.bi-trash-fill {
+  color: red;
+}
+
+.bi-geo-alt-fill {
+  color: $color-purple;
 }
 
 ul.list-group:hover {
@@ -80,17 +103,18 @@ ul.list-group:hover {
 }
 
 .btn-purple {
-  background-color: #a519ad;
-  border-color: #a519ad;
-  color: white;
+  background-color: $color-purple;
+  border-color: $color-purple;
+  color: $color-white;
 }
 .btn-purple:hover {
-  background-color: white;
-  border-color: #a519ad;
-  color: #a519ad;
+  background-color: $color-white;
+  border-color: $color-purple;
+  color: $color-purple;
 }
 
+/* logo */
 .home-logo {
   border-radius: 10px;
-  box-shadow: 0 0 9px white;
+  box-shadow: 0 0 9px $color-white;
 }

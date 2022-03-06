@@ -7,7 +7,6 @@ import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-ver-pais',
   templateUrl: './ver-pais.component.html',
-  styleUrls: ['./ver-pais.component.scss'],
 })
 export class VerPaisComponent implements OnInit {
   pais!: Country;
@@ -26,6 +25,13 @@ export class VerPaisComponent implements OnInit {
       });
   }
 
+  /**
+   * Recover the language from the Languages object
+   * @date 3/6/2022 - 7:50:32 PM
+   *
+   * @param {object} language
+   * @returns {*}
+   */
   getLanguage(language: object) {
     if (language) {
       return Object.values(language)[0];
@@ -33,6 +39,10 @@ export class VerPaisComponent implements OnInit {
     return;
   }
 
+  /**
+   * Go back
+   * @date 3/6/2022 - 8:22:54 PM
+   */
   back(): void {
     this.router.navigate(['/paises']);
   }

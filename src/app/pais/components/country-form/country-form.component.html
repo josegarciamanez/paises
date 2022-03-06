@@ -1,7 +1,7 @@
 <form
   class="form-group row"
   [formGroup]="countryForm"
-  (ngSubmit)="guardar()"
+  (ngSubmit)="saveCountry()"
   autocomplete="off"
 >
   <label for="nombre">Nombre*</label>
@@ -12,7 +12,7 @@
     type="text"
     placeholder="Nombre del País..."
   />
-  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('nombre')">
+  <span class="form-text text-danger mb-4" *ngIf="fieldIsValid('nombre')">
     Este campo es requerido
   </span>
   <label for="capital">Capital*</label>
@@ -24,10 +24,7 @@
     type="text"
     placeholder="Capital..."
   />
-  <span
-    class="form-text text-danger mb-4 mt-0"
-    *ngIf="campoEsValido('capital')"
-  >
+  <span class="form-text text-danger mb-4 mt-0" *ngIf="fieldIsValid('capital')">
     Este campo es requerido
   </span>
   <label for="poblacion">Población*</label>
@@ -39,7 +36,7 @@
     type="text"
     placeholder="Población..."
   />
-  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('poblacion')">
+  <span class="form-text text-danger mb-4" *ngIf="fieldIsValid('poblacion')">
     Este campo es requerido
   </span>
   <label for="idioma">Idioma*</label>
@@ -50,7 +47,7 @@
     type="text"
     placeholder="Idioma..."
   />
-  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('idioma')">
+  <span class="form-text text-danger mb-4" *ngIf="fieldIsValid('idioma')">
     Este campo es requerido
   </span>
   <span>(*)Campos Requeridos</span>
@@ -62,19 +59,3 @@
     Guardar<i class="bi bi-save2 mx-2"></i>
   </button>
 </form>
-
-<!-- <div class="row">
-  <div class="col">
-    <span>Valid</span>
-    <pre>{{ countryForm.valid }}</pre>
-
-    <span>Pristine</span>
-    <pre>{{ countryForm.pristine }}</pre>
-
-    <span>Touched</span>
-    <pre>{{ countryForm.touched }}</pre>
-
-    <span>Value</span>
-    <pre>{{ countryForm.value | json }}</pre>
-  </div>
-</div> -->
