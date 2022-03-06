@@ -35,6 +35,6 @@ export class VerPaisComponent implements OnInit {
   }
 
   back(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/paises']);
   }
 }

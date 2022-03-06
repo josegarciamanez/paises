@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { AgregarPaisComponent } from './pages/agregar-pais/agregar-pais.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CountryFormComponent } from './components/country-form/country-form.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CountryFormComponent } from './components/country-form/country-form.com
     PaisTablaComponent,
     AgregarPaisComponent,
     CountryFormComponent,
+    HomeComponent,
   ],
   exports: [
     PorPaisComponent,

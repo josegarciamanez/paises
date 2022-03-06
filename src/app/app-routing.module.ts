@@ -5,15 +5,20 @@ import { PorCapitalComponent } from './pais/pages/por-capital/por-capital.compon
 import { PorPaisComponent } from './pais/pages/por-pais/por-pais.component';
 import { VerPaisComponent } from './pais/pages/ver-pais/ver-pais.component';
 import { AgregarPaisComponent } from './pais/pages/agregar-pais/agregar-pais.component';
+import { HomeComponent } from './pais/pages/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PaisesComponent,
+    component: HomeComponent,
     pathMatch: 'full',
   },
   {
     path: 'paises',
+    component: PaisesComponent,
+  },
+  {
+    path: 'pais',
     component: PorPaisComponent,
   },
   {
