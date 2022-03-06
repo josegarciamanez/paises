@@ -1,7 +1,9 @@
-<h2 *ngIf="!isEdit;else editTemplate">Agregar Nuevo País</h2>
-<ng-template #editTemplate>
-  <h2>Editar País</h2>
-</ng-template>
-<div class="col-9 card m-auto p-5">
-  <app-country-form></app-country-form>
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2 *ngIf="!isEdit;else editTemplate">Agregar Nuevo País</h2>
+  <ng-template #editTemplate>
+    <h2>Editar País</h2>
+  </ng-template>
+  <div class="col-9 card m-auto p-5">
+    <app-country-form></app-country-form>
+  </div>
 </div>
