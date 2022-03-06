@@ -23,7 +23,6 @@ export class VerPaisComponent implements OnInit {
       .pipe(switchMap(({ id }) => this.paisService.buscarPais(id)))
       .subscribe((pais) => {
         this.pais = pais[0];
-        console.log(this.pais);
       });
   }
 

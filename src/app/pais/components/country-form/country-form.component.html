@@ -54,7 +54,11 @@
     Este campo es requerido
   </span>
   <span>(*)Campos Requeridos</span>
-  <button type="submit" class="btn btn-purple mt-3 w-25">
+  <button
+    type="submit"
+    class="btn btn-purple mt-3 w-25"
+    [ngClass]="{disabled: !countryForm.valid}"
+  >
     Guardar<i class="bi bi-save2 mx-2"></i>
   </button>
 </form>
