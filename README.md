@@ -6,6 +6,8 @@
 npm install
 ```
 
+- App desplegada en https://josegarcia-paises.netlify.app/
+
 ## INFORMACIÓN:
 
 - Tiempo: 3 días.
