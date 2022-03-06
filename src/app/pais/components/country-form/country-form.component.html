@@ -1,40 +1,76 @@
 <form
   class="form-group row"
   [formGroup]="countryForm"
-  (onSubmit)="doSomething()"
+  (ngSubmit)="guardar()"
   autocomplete="off"
 >
-  <label for="nombre">Nombre</label>
+  <label for="nombre">Nombre*</label>
   <input
-    class="form-control col-6 mb-4"
+    class="form-control col-6 mb-2"
     id="nombre"
     formControlName="nombre"
     type="text"
     placeholder="Nombre del País..."
   />
+  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('nombre')">
+    Este campo es requerido
+  </span>
+  <label for="capital">Capital*</label>
+
   <input
-    class="form-control col-6 mb-4"
+    class="form-control col-6 mb-2"
     id="capital"
     formControlName="capital"
     type="text"
     placeholder="Capital..."
   />
+  <span
+    class="form-text text-danger mb-4 mt-0"
+    *ngIf="campoEsValido('capital')"
+  >
+    Este campo es requerido
+  </span>
+  <label for="poblacion">Población*</label>
+
   <input
-    class="form-control col-6 mb-4"
+    class="form-control col-6 mb-2"
     id="poblacion"
     formControlName="poblacion"
     type="text"
     placeholder="Población..."
   />
-
+  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('poblacion')">
+    Este campo es requerido
+  </span>
+  <label for="idioma">Idioma*</label>
   <input
-    class="form-control col-6 mb-4"
+    class="form-control col-6 mb-2"
     id="idioma"
     formControlName="idioma"
     type="text"
     placeholder="Idioma..."
   />
+  <span class="form-text text-danger mb-4" *ngIf="campoEsValido('idioma')">
+    Este campo es requerido
+  </span>
+  <span>(*)Campos Requeridos</span>
+  <button type="submit" class="btn btn-purple mt-3 w-25">
+    Guardar<i class="bi bi-save2 mx-2"></i>
+  </button>
 </form>
-<button type="submit" class="btn btn-purple mt-3 float-end">
-  Guardar<i class="bi bi-save2 mx-2"></i>
-</button>
+
+<!-- <div class="row">
+  <div class="col">
+    <span>Valid</span>
+    <pre>{{ countryForm.valid }}</pre>
+
+    <span>Pristine</span>
+    <pre>{{ countryForm.pristine }}</pre>
+
+    <span>Touched</span>
+    <pre>{{ countryForm.touched }}</pre>
+
+    <span>Value</span>
+    <pre>{{ countryForm.value | json }}</pre>
+  </div>
+</div> -->

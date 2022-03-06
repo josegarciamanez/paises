@@ -30,6 +30,10 @@ const routes: Routes = [
     component: AgregarPaisComponent,
   },
   {
+    path: 'editar/:id',
+    component: AgregarPaisComponent,
+  },
+  {
     path: 'pais/:id',
     component: VerPaisComponent,
   },

@@ -34,6 +34,7 @@ npm install
 - Documentación de la API pública: https://restcountries.com/#api-endpoints-v3-all
 
 TODO: - PANTALLA VER PAÍS EDITAR
+TODO: - CLASS DISABLED A BOTONES FORMULARIO
 TODO: - TEST UNITARIOS
 TODO: - REFACTOR
 TODO: - DOCUMENTACIÓN

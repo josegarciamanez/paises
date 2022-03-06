@@ -39,7 +39,11 @@
           routerLinkActive="router-link-active"
           ><i class="bi bi-eye-fill m-1" style="color: green;"></i
         ></a>
-        <a><i class="bi bi-pencil m-1" style="color: purple;"></i></a>
+        <a
+          [routerLink]="['/editar', pais.name.common]"
+          routerLinkActive="router-link-active"
+          ><i class="bi bi-pencil m-1" style="color: purple;"></i
+        ></a>
         <a (click)="delete(pais)"
           ><i class="bi bi-trash-fill m-1" style="color: red;"></i
         ></a>

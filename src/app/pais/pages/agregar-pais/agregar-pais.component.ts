@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import Swal from 'sweetalert2';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { Country } from '../../interfaces/pais.interface';
+import { PaisService } from '../../services/pais.service';
 
 @Component({
   selector: 'app-agregar-pais',
@@ -8,36 +10,21 @@ import Swal from 'sweetalert2';
   styleUrls: ['./agregar-pais.component.scss'],
 })
 export class AgregarPaisComponent implements OnInit {
-  countryForm: FormGroup = this.fb.group({
-    nombre: ['', Validators.required],
-    capital: ['', Validators.required],
-    poblacion: ['', Validators.required],
-    idioma: ['', Validators.required],
-  });
-  constructor(private fb: FormBuilder) {}
+  pais!: Country;
+  isEdit: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private paisService: PaisService
+  ) {}
 
-  campoEsValido(campo: string) {
-    return (
-      this.countryForm.controls[campo].errors &&
-      this.countryForm.controls[campo].touched
-    );
-  }
-
-  guardar() {
-    if (this.countryForm.invalid) {
-      this.countryForm.markAllAsTouched();
-      return;
+  ngOnInit(): void {
+    if (this.activatedRoute.snapshot.params['id']) {
+      let params = this.activatedRoute.snapshot.params['id'];
+      this.paisService.buscarPais(params).subscribe((pais) => {
+        this.pais = pais[0];
+        this.isEdit = true;
+      });
     }
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: `${this.countryForm.value.nombre.toUpperCase()} guardado con éxito`,
-      showConfirmButton: false,
-      timer: 5000,
-    });
-    console.log(this.countryForm.value);
-    this.countryForm.reset();
   }
 }
