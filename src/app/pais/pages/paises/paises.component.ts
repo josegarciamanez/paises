@@ -27,6 +27,7 @@ export class PaisesComponent implements OnInit {
   ngOnInit(): void {
     this.paisService.buscarPaises().subscribe((data) => {
       this.paises = data;
+      console.log(this.paises);
     });
   }
 

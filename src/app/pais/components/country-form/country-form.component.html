@@ -1,0 +1,40 @@
+<form
+  class="form-group row"
+  [formGroup]="countryForm"
+  (onSubmit)="doSomething()"
+  autocomplete="off"
+>
+  <label for="nombre">Nombre</label>
+  <input
+    class="form-control col-6 mb-4"
+    id="nombre"
+    formControlName="nombre"
+    type="text"
+    placeholder="Nombre del País..."
+  />
+  <input
+    class="form-control col-6 mb-4"
+    id="capital"
+    formControlName="capital"
+    type="text"
+    placeholder="Capital..."
+  />
+  <input
+    class="form-control col-6 mb-4"
+    id="poblacion"
+    formControlName="poblacion"
+    type="text"
+    placeholder="Población..."
+  />
+
+  <input
+    class="form-control col-6 mb-4"
+    id="idioma"
+    formControlName="idioma"
+    type="text"
+    placeholder="Idioma..."
+  />
+</form>
+<button type="submit" class="btn btn-purple mt-3 float-end">
+  Guardar<i class="bi bi-save2 mx-2"></i>
+</button>
