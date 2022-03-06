@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
 import Swal from 'sweetalert2';
 import { Country } from '../../interfaces/pais.interface';
+import { PaisService } from '../../services/pais.service';
 
 @Component({
   selector: 'app-country-form',
@@ -9,8 +12,7 @@ import { Country } from '../../interfaces/pais.interface';
   styleUrls: ['./country-form.component.scss'],
 })
 export class CountryFormComponent implements OnInit {
-  @Input()
-  pais!: Country;
+  pais: Country | undefined;
 
   countryForm: FormGroup = this.fb.group({
     nombre: ['', Validators.required],
@@ -19,12 +21,31 @@ export class CountryFormComponent implements OnInit {
     idioma: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private activatedRoute: ActivatedRoute,
+    private paisService: PaisService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    if (this.pais) {
-      console.log(this.pais);
+    if (this.activatedRoute.snapshot.params['id']) {
+      this.activatedRoute.params
+        .pipe(switchMap(({ id }) => this.paisService.buscarPais(id)))
+        .subscribe((pais) => {
+          this.pais = pais[0];
+          this.setValues();
+        });
     }
+  }
+
+  setValues() {
+    this.countryForm.controls['nombre'].setValue(this.pais!.name.common);
+    this.countryForm.controls['capital'].setValue(this.pais!.capital);
+    this.countryForm.controls['poblacion'].setValue(this.pais!.population);
+    this.countryForm.controls['idioma'].setValue(
+      this.getLanguage(this.pais!.languages)
+    );
   }
 
   campoEsValido(campo: string) {
@@ -46,7 +67,16 @@ export class CountryFormComponent implements OnInit {
       showConfirmButton: false,
       timer: 5000,
     });
-    console.log(this.countryForm.value);
     this.countryForm.reset();
+    if (this.activatedRoute.snapshot.params['id']) {
+      this.router.navigate(['/paises']);
+    }
+  }
+
+  getLanguage(language: object) {
+    if (language) {
+      return Object.values(language)[0];
+    }
+    return;
   }
 }
