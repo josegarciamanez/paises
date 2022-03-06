@@ -65,7 +65,7 @@ export class CountryFormComponent implements OnInit {
       icon: 'success',
       title: `${this.countryForm.value.nombre.toUpperCase()} guardado con éxito`,
       showConfirmButton: false,
-      timer: 5000,
+      timer: 3000,
     });
     this.countryForm.reset();
     if (this.activatedRoute.snapshot.params['id']) {
