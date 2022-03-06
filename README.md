@@ -32,7 +32,3 @@ npm install
 
 - La creación y actualización no tiene que ser funcional.
 - Documentación de la API pública: https://restcountries.com/#api-endpoints-v3-all
-
-TODO: - REFACTOR y DOCUMENTACIÓN
-TODO: - TEST UNITARIOS
-TODO: - VÍDEO EXPLICATIVO
