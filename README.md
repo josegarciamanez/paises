@@ -6,7 +6,19 @@
 npm install
 ```
 
-- App desplegada en https://josegarcia-paises.netlify.app/
+- [DEPLOYMENT](https://josegarcia-paises.netlify.app/)
+- API - https://restcountries.com/v3.1
+
+## Librerías usadas:
+
+- [Angular](https://angular.io/)
+- [Angular Bootstrap](https://angular.io/guide/bootstrap)
+- [SweetAlert2](https://sweetalert2.github.io/)
+- [Animate.css](https://daneden.github.io/animate.css/)
+
+## Cobertura de testeo inicial
+
+![coverage](./src/assets/coverage.png)
 
 ## INFORMACIÓN:
 
