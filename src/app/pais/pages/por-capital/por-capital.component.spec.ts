@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { PorCapitalComponent } from './por-capital.component';
 
@@ -8,6 +10,7 @@ describe('PorCapitalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientTestingModule],
       declarations: [PorCapitalComponent],
     }).compileComponents();
   });
@@ -18,7 +21,7 @@ describe('PorCapitalComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
