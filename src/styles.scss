@@ -1,8 +1,6 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
-
-$color-purple: #a519ad;
-$color-white: #ffffff;
+@import '_variables';
 
 /* flags */
 .flag {
@@ -16,14 +14,13 @@ $color-white: #ffffff;
 
 /* buttons */
 .btn {
-  &--close {
+  &-close {
     transition: all 0.6s ease;
-    color: $color-white !important;
   }
-  &--close:focus {
+  &-close:focus {
     box-shadow: none;
   }
-  &--close:hover {
+  &-close:hover {
     transform: scale(1.4);
     transition: all 0.6s ease;
   }

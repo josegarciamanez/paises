@@ -76642,7 +76642,7 @@ NgbAlert.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
       i18n_1 = $localize`:@@ngb.alert.close:Close`;
     }
 
-    return [["type", "button", "class", "btn--close", "aria-label", i18n_1, 3, "click", 4, "ngIf"], ["type", "button", "aria-label", i18n_1, 1, "btn--close", 3, "click"]];
+    return [["type", "button", "class", "btn-close", "aria-label", i18n_1, 3, "click", 4, "ngIf"], ["type", "button", "aria-label", i18n_1, 1, "btn-close", 3, "click"]];
   },
   template: function NgbAlert_Template(rf, ctx) {
     if (rf & 1) {
@@ -76678,7 +76678,7 @@ NgbAlert.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
       },
       template: `
     <ng-content></ng-content>
-    <button *ngIf="dismissible" type="button" class="btn--close" aria-label="Close" i18n-aria-label="@@ngb.alert.close"
+    <button *ngIf="dismissible" type="button" class="btn-close" aria-label="Close" i18n-aria-label="@@ngb.alert.close"
       (click)="close()">
     </button>
     `,
@@ -89379,7 +89379,7 @@ NgbToast.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
       i18n_85 = $localize`:@@ngb.toast.close-aria:Close`;
     }
 
-    return [["headerTpl", ""], [3, "ngIf"], [1, "toast-body"], [1, "me-auto"], [1, "toast-header"], [3, "ngTemplateOutlet"], ["type", "button", "aria-label", i18n_85, 1, "btn--close", 3, "click"]];
+    return [["headerTpl", ""], [3, "ngIf"], [1, "toast-body"], [1, "me-auto"], [1, "toast-header"], [3, "ngTemplateOutlet"], ["type", "button", "aria-label", i18n_85, 1, "btn-close", 3, "click"]];
   },
   template: function NgbToast_Template(rf, ctx) {
     if (rf & 1) {
@@ -89422,7 +89422,7 @@ NgbToast.ɵcmp = /* @__PURE__ */_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵ
     <ng-template [ngIf]="contentHeaderTpl || header">
       <div class="toast-header">
         <ng-template [ngTemplateOutlet]="contentHeaderTpl || headerTpl"></ng-template>
-        <button type="button" class="btn--close" aria-label="Close" i18n-aria-label="@@ngb.toast.close-aria" (click)="hide()">
+        <button type="button" class="btn-close" aria-label="Close" i18n-aria-label="@@ngb.toast.close-aria" (click)="hide()">
         </button>
       </div>
     </ng-template>
