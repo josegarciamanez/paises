@@ -3,59 +3,50 @@
 
 $color-purple: #a519ad;
 $color-white: #ffffff;
-.small-flag {
-  width: 50px;
-}
 
 /* flags */
-.big-flag {
-  width: 465px;
-}
-
-.btn-flag {
-  border: none;
-  padding: 0;
-  margin: 0;
+.flag {
+  &--small {
+    width: 50px;
+  }
+  &--big {
+    width: 465px;
+  }
 }
 
 /* buttons */
-.btn-close {
-  transition: all 0.6s ease;
-  color: $color-white !important;
-}
-
-.btn-close:focus {
-  box-shadow: none;
-}
-
-.btn-close:hover {
-  transform: scale(1.4);
-  transition: all 0.6s ease;
+.btn {
+  &--close {
+    transition: all 0.6s ease;
+    color: $color-white !important;
+  }
+  &--close:focus {
+    box-shadow: none;
+  }
+  &--close:hover {
+    transform: scale(1.4);
+    transition: all 0.6s ease;
+  }
+  &--flag {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  &--purple {
+    background-color: $color-purple;
+    border-color: $color-purple;
+    color: $color-white;
+  }
+  &--purple:hover {
+    background-color: $color-white;
+    border-color: $color-purple;
+    color: $color-purple;
+  }
 }
 
 /* modal */
 .modal-content {
   border-radius: 1.3rem;
-}
-
-/* navbar styles */
-.logo-nav {
-  width: 70px;
-}
-
-.user {
-  position: absolute;
-  right: 30px;
-}
-
-.navbar {
-  padding-top: 0;
-  padding-bottom: 0;
-  box-shadow: 0 0 9px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
 }
 
 /* utils */
@@ -77,7 +68,7 @@ $color-white: #ffffff;
   color: $color-purple;
 }
 
-/* buttons*/
+/* icons*/
 .bi:hover {
   cursor: pointer;
 }
@@ -102,19 +93,28 @@ ul.list-group:hover {
   cursor: pointer;
 }
 
-.btn-purple {
-  background-color: $color-purple;
-  border-color: $color-purple;
-  color: $color-white;
-}
-.btn-purple:hover {
-  background-color: $color-white;
-  border-color: $color-purple;
-  color: $color-purple;
-}
-
 /* logo */
-.home-logo {
+.logo--home {
   border-radius: 10px;
   box-shadow: 0 0 9px $color-white;
+}
+
+/* navbar styles */
+.nav--logo {
+  width: 70px;
+}
+
+.user {
+  position: absolute;
+  right: 30px;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  box-shadow: 0 0 9px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }

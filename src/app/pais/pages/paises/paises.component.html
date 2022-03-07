@@ -22,8 +22,8 @@
         *ngFor="let pais of paises | slice: (page-1) * pageSize : page * pageSize; let i = index"
       >
         <td>
-          <button type="button" class="btn-flag" (click)="showModalInfo(pais)">
-            <img class="small-flag" [src]="pais.flags.svg" />
+          <button type="button" class="btn--flag" (click)="showModalInfo(pais)">
+            <img class="flag--small" [src]="pais.flags.svg" />
           </button>
         </td>
         <td>{{ pais.name.common }}</td>
@@ -54,14 +54,14 @@
               <h5 class="modal-title">Escudo de Armas</h5>
               <button
                 type="button"
-                class="btn btn-close"
+                class="btn btn--close"
                 data-dismiss="modal"
                 aria-label="Close"
                 (click)="modal.close()"
               ></button>
             </div>
             <div class="modal-body">
-              <img class="big-flag" [src]="coatOfArms" />
+              <img class="flag--big" [src]="coatOfArms" />
             </div>
           </div>
         </ng-template>

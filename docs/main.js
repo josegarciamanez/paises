@@ -187,7 +187,7 @@ class ModalFlagComponent {
     ngOnInit() { }
 }
 ModalFlagComponent.ɵfac = function ModalFlagComponent_Factory(t) { return new (t || ModalFlagComponent)(); };
-ModalFlagComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ModalFlagComponent, selectors: [["app-modal-flag"]], inputs: { pais: "pais" }, decls: 2, vars: 0, consts: [["myModalInfo", ""], [1, "modal-content"], [1, "modal-header"], [1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "btn", "btn-close", 3, "click"], [1, "modal-body"], [1, "big-flag", 3, "src"]], template: function ModalFlagComponent_Template(rf, ctx) { if (rf & 1) {
+ModalFlagComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ModalFlagComponent, selectors: [["app-modal-flag"]], inputs: { pais: "pais" }, decls: 2, vars: 0, consts: [["myModalInfo", ""], [1, "modal-content"], [1, "modal-header"], [1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "btn", "btn--close", 3, "click"], [1, "modal-body"], [1, "flag--big", 3, "src"]], template: function ModalFlagComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, ModalFlagComponent_ng_template_0_Template, 7, 1, "ng-template", null, 0, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplateRefExtractor"]);
     } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtb2RhbC1mbGFnLmNvbXBvbmVudC5zY3NzIn0= */"] });
 
@@ -310,7 +310,7 @@ class PaisTablaComponent {
     }
 }
 PaisTablaComponent.ɵfac = function PaisTablaComponent_Factory(t) { return new (t || PaisTablaComponent)(); };
-PaisTablaComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PaisTablaComponent, selectors: [["app-pais-tabla"]], inputs: { paises: "paises" }, decls: 16, vars: 1, consts: [[1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [1, "small-flag", 3, "src"]], template: function PaisTablaComponent_Template(rf, ctx) { if (rf & 1) {
+PaisTablaComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PaisTablaComponent, selectors: [["app-pais-tabla"]], inputs: { paises: "paises" }, decls: 16, vars: 1, consts: [[1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [1, "flag--small", 3, "src"]], template: function PaisTablaComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "table", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "thead");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "tr");
@@ -516,7 +516,7 @@ PaisesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.myModalInfo = _t.first);
-    } }, decls: 23, vars: 7, consts: [[3, "collectionSize", "page", "pageChange"], [1, "table", "table-hover", "table-striped"], [4, "ngFor", "ngForOf"], ["type", "button", 1, "btn-flag", 3, "click"], [1, "small-flag", 3, "src"], ["target", "_blank", 3, "href"], [1, "bi", "bi-geo-alt-fill", "m-1", 2, "color", "purple"], ["routerLinkActive", "router-link-active", 3, "routerLink"], [1, "bi", "bi-eye-fill", "m-1", 2, "color", "green"], [1, "bi", "bi-pen-fill", "m-1"], [3, "click"], [1, "bi", "bi-trash-fill", "m-1", 2, "color", "red"], ["myModalInfo", ""], [1, "modal-content"], [1, "modal-header"], [1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "btn", "btn-close", 3, "click"], [1, "modal-body"], [1, "big-flag", 3, "src"]], template: function PaisesComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 23, vars: 7, consts: [[3, "collectionSize", "page", "pageChange"], [1, "table", "table-hover", "table-striped"], [4, "ngFor", "ngForOf"], ["type", "button", 1, "btn--flag", 3, "click"], [1, "flag--small", 3, "src"], ["target", "_blank", 3, "href"], [1, "bi", "bi-geo-alt-fill", "m-1", 2, "color", "purple"], ["routerLinkActive", "router-link-active", 3, "routerLink"], [1, "bi", "bi-eye-fill", "m-1", 2, "color", "green"], [1, "bi", "bi-pen-fill", "m-1"], [3, "click"], [1, "bi", "bi-trash-fill", "m-1", 2, "color", "red"], ["myModalInfo", ""], [1, "modal-content"], [1, "modal-header"], [1, "modal-title"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "btn", "btn--close", 3, "click"], [1, "modal-body"], [1, "flag--big", 3, "src"]], template: function PaisesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "h2");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "Todos los Paises");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -878,7 +878,7 @@ class VerPaisComponent {
     }
 }
 VerPaisComponent.ɵfac = function VerPaisComponent_Factory(t) { return new (t || VerPaisComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_services_pais_service__WEBPACK_IMPORTED_MODULE_0__.PaisService), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
-VerPaisComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: VerPaisComponent, selectors: [["app-ver-pais"]], decls: 3, vars: 2, consts: [["class", "alert alert-info", 4, "ngIf", "ngIfElse"], ["divPais", ""], [1, "alert", "alert-info"], [1, "row"], [1, "col-12"], [1, "col-4"], [1, "img-thumbnail", 3, "src"], [1, "col"], [1, "list-group"], [1, "list-group-item"], [1, "mt-2", "float-end", "btn", "btn-purple", 3, "click"]], template: function VerPaisComponent_Template(rf, ctx) { if (rf & 1) {
+VerPaisComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: VerPaisComponent, selectors: [["app-ver-pais"]], decls: 3, vars: 2, consts: [["class", "alert alert-info", 4, "ngIf", "ngIfElse"], ["divPais", ""], [1, "alert", "alert-info"], [1, "row"], [1, "col-12"], [1, "col-4"], [1, "img-thumbnail", 3, "src"], [1, "col"], [1, "list-group"], [1, "list-group-item"], [1, "mt-2", "float-end", "btn", "btn--purple", 3, "click"]], template: function VerPaisComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, VerPaisComponent_div_0_Template, 2, 0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerPaisComponent_ng_template_1_Template, 38, 9, "ng-template", null, 1, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplateRefExtractor"]);
     } if (rf & 2) {
@@ -1007,7 +1007,7 @@ class NavbarComponent {
     }
 }
 NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(); };
-NavbarComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 5, vars: 0, consts: [[1, "navbar", "navbar-dark", "bg-dark", "justify-content-center"], [1, "navbar-brand"], ["src", "assets/logo.png", "alt", "", 1, "logo-nav"], [1, "text-light", "user"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+NavbarComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 5, vars: 0, consts: [[1, "navbar", "navbar-dark", "bg-dark", "justify-content-center"], [1, "navbar-brand"], ["src", "assets/logo.png", "alt", "", 1, "nav--logo"], [1, "text-light", "user"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "img", 2);
