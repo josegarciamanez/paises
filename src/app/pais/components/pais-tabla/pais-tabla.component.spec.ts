@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerPaisComponent } from './ver-pais.component';
+import { PaisTablaComponent } from './pais-tabla.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('VerPaisComponent', () => {
-  let component: VerPaisComponent;
-  let fixture: ComponentFixture<VerPaisComponent>;
+  let component: PaisTablaComponent;
+  let fixture: ComponentFixture<PaisTablaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientTestingModule],
-      declarations: [VerPaisComponent],
+      declarations: [PaisTablaComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VerPaisComponent);
+    fixture = TestBed.createComponent(PaisTablaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -37,11 +37,5 @@ describe('VerPaisComponent', () => {
     let language = undefined;
     component.getLanguage(language);
     expect(spy).toHaveBeenCalledWith(language);
-  });
-
-  it('should back() works correctly', () => {
-    let spy = spyOn(component, 'back').and.callThrough();
-    component.back();
-    expect(spy).toHaveBeenCalled();
   });
 });

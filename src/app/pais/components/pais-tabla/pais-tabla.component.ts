@@ -17,7 +17,7 @@ export class PaisTablaComponent {
    * @param {object} language
    * @returns {*}
    */
-  getLanguage(language: object) {
+  getLanguage(language?: object) {
     if (language) {
       return Object.values(language)[0];
     }

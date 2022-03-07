@@ -24,4 +24,11 @@ describe('PorCapitalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should buscar() works correctly', () => {
+    let spy = spyOn(component, 'buscar').and.callThrough();
+    component.buscar('españa');
+    expect(component.buscar).toBeDefined();
+    expect(spy).toHaveBeenCalledWith('españa');
+  });
 });

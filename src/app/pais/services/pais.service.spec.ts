@@ -15,12 +15,7 @@ describe('PaisService', () => {
     service = TestBed.inject(PaisService);
   });
 
-  xit('should be created', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
-  });
-
-  xit('should return an Observable<Country[]>', () => {
-    expect(service.buscarPaises()).toBeTruthy();
-    expect(service.buscarPaises()).toBeInstanceOf(Observable);
   });
 });

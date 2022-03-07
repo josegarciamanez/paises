@@ -36,7 +36,7 @@ export class PaisesComponent implements OnInit {
    * @param {object} language
    * @returns {*}
    */
-  getLanguage(language: object) {
+  getLanguage(language?: object) {
     if (language) {
       return Object.values(language)[0];
     }
