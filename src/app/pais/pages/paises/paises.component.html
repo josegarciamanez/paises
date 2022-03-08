@@ -1,71 +1,81 @@
-<div class="animate__animated animate__fadeIn animate__faster">
-  <h2>Todos los Paises</h2>
-  <span>(Click en la bandera del país para ver su escudo de armas)*</span>
-  <hr />
-  <ngb-pagination
-    [collectionSize]="paises.length / 2"
-    [(page)]="page"
-  ></ngb-pagination>
-  <table class="table table-hover table-striped">
-    <thead>
-      <tr>
-        <th>Bandera</th>
-        <th>Nombre</th>
-        <th>Población</th>
-        <th>Idioma Oficial</th>
-        <th>Maps</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        *ngFor="let pais of paises | slice: (page-1) * pageSize : page * pageSize; let i = index"
-      >
-        <td>
-          <button type="button" class="btn--flag" (click)="showModalInfo(pais)">
-            <img class="flag--small" [src]="pais.flags.svg" />
-          </button>
-        </td>
-        <td>{{ pais.name.common }}</td>
-        <td>{{ pais.population | number }}</td>
-        <td>{{ getLanguage(pais.languages)}}</td>
-        <td>
-          <a [href]="pais.maps.googleMaps" target="_blank"
-            ><i class="bi bi-geo-alt-fill m-1"></i
-          ></a>
-        </td>
-        <td>
-          <a
-            [routerLink]="['/pais', pais.name.common]"
-            routerLinkActive="router-link-active"
-            ><i class="bi bi-eye-fill m-1"></i
-          ></a>
-          <a
-            [routerLink]="['/editar', pais.name.common]"
-            routerLinkActive="router-link-active"
-            ><i class="bi bi-pencil m-1"></i
-          ></a>
-          <a (click)="delete(pais)"><i class="bi bi-trash-fill m-1"></i></a>
-        </td>
-
-        <ng-template #myModalInfo let-modal>
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Escudo de Armas</h5>
-              <button
-                type="button"
-                class="btn btn-close"
-                data-dismiss="modal"
-                aria-label="Close"
-                (click)="modal.close()"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <img class="flag--big" [src]="coatOfArms" />
-            </div>
-          </div>
-        </ng-template>
-      </tr>
-    </tbody>
-  </table>
+<div *ngIf="!paises; else divPaises" class="alert alert-info">
+  Espere por favor...
 </div>
+
+<ng-template #divPaises>
+  <div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Todos los Paises</h2>
+    <span>(Click en la bandera del país para ver su escudo de armas)*</span>
+    <hr />
+    <ngb-pagination
+      [collectionSize]="paises.length / 2"
+      [(page)]="page"
+    ></ngb-pagination>
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Bandera</th>
+          <th>Nombre</th>
+          <th>Población</th>
+          <th>Idioma Oficial</th>
+          <th>Maps</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let pais of paises | slice: (page-1) * pageSize : page * pageSize; let i = index"
+        >
+          <td>
+            <button
+              type="button"
+              class="btn--flag"
+              (click)="showModalInfo(pais)"
+            >
+              <img class="flag--small" [src]="pais.flags.svg" />
+            </button>
+          </td>
+          <td>{{ pais.name.common }}</td>
+          <td>{{ pais.population | number }}</td>
+          <td>{{ getLanguage(pais.languages)}}</td>
+          <td>
+            <a [href]="pais.maps.googleMaps" target="_blank"
+              ><i class="bi bi-geo-alt-fill m-1"></i
+            ></a>
+          </td>
+          <td>
+            <a
+              [routerLink]="['/pais', pais.name.common]"
+              routerLinkActive="router-link-active"
+              ><i class="bi bi-eye-fill m-1"></i
+            ></a>
+            <a
+              [routerLink]="['/editar', pais.name.common]"
+              routerLinkActive="router-link-active"
+              ><i class="bi bi-pencil m-1"></i
+            ></a>
+            <a (click)="delete(pais)"><i class="bi bi-trash-fill m-1"></i></a>
+          </td>
+
+          <ng-template #myModalInfo let-modal>
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Escudo de Armas</h5>
+                <button
+                  type="button"
+                  class="btn btn-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  (click)="modal.close()"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img class="flag--big" [src]="coatOfArms" />
+              </div>
+            </div>
+          </ng-template>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>

@@ -13,7 +13,7 @@ export class PaisesComponent implements OnInit {
     | TemplateRef<any>
     | undefined;
 
-  paises: Country[] = [];
+  paises!: Country[];
   coatOfArms: string | undefined;
   page: number = 1;
   pageSize = 20;
